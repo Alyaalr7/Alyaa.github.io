@@ -1404,8 +1404,8 @@ span{
     right: 0;
     width: 100%;
     height: 100%;
-    background:var(--bg-color);
-    z-index: 98;
+	background: #0d1117 !important; /* اكتبي الكود كذا صراحة */
+	z-index: 98;
 }
 /* .animate.home-img{ 
     width: 50%;
