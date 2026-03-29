@@ -11,7 +11,12 @@ menuIcon.onclick=()=>{
 
 
 // var audio = document.getElementById("audioPlayer");
-
+var loader = document.getElementById("preloader");
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    loader.style.display = "none";
+  }, 1000);
+});
 // const { animate } = require("framer-motion");
 
 // scroll sections
