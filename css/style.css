@@ -1458,6 +1458,32 @@ section:nth-child(odd) .animate.scroll{
 }
 
 @media (max-width:768px) {
+
+	/* 1. إخفاء أي طبقة أنيميشن بيضاء تغطي النص */
+    .animate, 
+    .show-animate .animate,
+    .home.show-animate .animate {
+        display: none !important; /* يعطل الطبقة اللي تغطي الشاشة */
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* 2. إظهار المحتوى الأصلي فوراً بدون انتظار الأنيميشن */
+    .home-content, 
+    .home-content h1, 
+    .home-content h3, 
+    .home-content .btn-box {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        background: transparent !important;
+    }
+
+    /* 3. التأكد من أن الخلفية سوداء وليست بيضاء */
+    .home {
+        background: #0b0f17 !important;
+        overflow: hidden !important;
+    }
         .about-card {
         padding: 2.5rem;
         margin: 0 1.5rem;
