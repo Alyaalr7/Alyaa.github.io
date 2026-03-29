@@ -12,10 +12,11 @@ menuIcon.onclick=()=>{
 
 // var audio = document.getElementById("audioPlayer");
 var loader = document.getElementById("preloader");
-window.addEventListener("load", function () {
-  setTimeout(function () {
+
+window.addEventListener("load", () => {
+  if (loader) {
     loader.style.display = "none";
-  }, 1000);
+  }
 });
 // const { animate } = require("framer-motion");
 
@@ -111,6 +112,4 @@ window.addEventListener('resize', windowResize);
 
 
 
-window.addEventListener("load", () => {
-  loader.style.display = "none";
-});
+
