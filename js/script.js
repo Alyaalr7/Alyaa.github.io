@@ -108,3 +108,9 @@ const windowResize = (event) => {
 
 window.addEventListener('mousemove', mouseMove);
 window.addEventListener('resize', windowResize);
+
+
+
+window.addEventListener("load", () => {
+  loader.style.display = "none";
+});
