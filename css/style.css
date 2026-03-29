@@ -1465,84 +1465,32 @@ section:nth-child(odd) .animate.scroll{
     }
 }
 
-@media (max-width:768px) {
-        .about-card {
-        padding: 2.5rem;
-        margin: 0 1.5rem;
-    }
-    
-    .about-text p {
-        font-size: 1.5rem; /* تصغير الخط للجوال */
-        text-align: justify; /* يخلي شكل النص أرتب في المساحات الضيقة */
-    }
-    .header {
-        background: var(--bg-color);
-        padding: 2rem 5%; /* تقليل الحواف الجانبية */
+@media (max-width: 768px) {
+    /* 1. إخفاء أي طبقة أنيميشن بيضاء تغطي النص */
+    .animate, 
+    .show-animate .animate,
+    .home.show-animate .animate {
+        display: none !important; /* يعطل الطبقة اللي تغطي الشاشة */
+        visibility: hidden;
+        opacity: 0;
     }
 
-    #menu-icon {
-        display: block; /* إظهار أيقونة المنيو */
-        cursor: pointer;
+    /* 2. إظهار المحتوى الأصلي فوراً بدون انتظار الأنيميشن */
+    .home-content, 
+    .home-content h1, 
+    .home-content h3, 
+    .home-content .btn-box {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        background: transparent !important;
     }
 
-    .navbar {
-        position: absolute;
-        top: 100%;
-        left: -100%; /* إخفاء لليسار */
-        width: 100%;
-        padding: 1rem 4%;
-        background: var(--second-bg-color); /* أفضل من المين كلر عشان النص يوضح */
-        border-top: .1rem solid rgba(255, 255, 255, .1);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-        transition: .4s ease;
-        z-index: 99;
-        overflow-x: hidden;
-        
-    }
-
-    /* لما تضغطي المنيو ويصير الكلاس active */
-    .navbar.active {
-        left: 0;
-    }
-
-    .navbar a {
-        display: block;
-        font-size: 1.8rem; /* تصغير الخط شوي للجوال */
-        margin: 2.5rem 0;
-        transform: translateX(-20rem);
-        transition: .3s ease;
-        opacity: 0; /* مخفي في البداية */
-    }
-
-    .navbar.active a {
-        transform: translateX(0);
-        opacity: 1; /* يظهر بنعومة */
-        transition-delay: .2s;
-    }
-
-    /* تعديل الهوم للجوال */
+    /* 3. التأكد من أن الخلفية سوداء وليست بيضاء */
     .home {
-        padding: 0 5%;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
+        background: #0b0f17 !important;
+        overflow: hidden !important;
     }
-
-.home-content h1 {
-    line-height: 1.2;
-}
-
-    /* تعديل المشاريع (أهم نقطة) */
-    .portfolio-container {
-        grid-template-columns: 1fr; /* مشروع واحد في كل صف عشان الصور توضح */
-        gap: 2rem;
-    }
-
-    /* إخفاء خلفيات الهوم اللي تخرب الشكل */
-    .home-imghover {
-        display: none;
-    }
-
 }
 @media(max-width:617px){
     .portfolio-container{
