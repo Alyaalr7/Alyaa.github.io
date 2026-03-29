@@ -253,11 +253,15 @@ html{
 
 }
 body {
-    background: linear-gradient(135deg, #0b0f17, #161b22 70%); /* تدرج أزرق غامق */
+	background-color: #0b0f17; /* 1. لون أساسي ثابت يضمن عدم ظهور البياض */
+    background: linear-gradient(135deg, #0b0f17, #161b22 70%); /* 2. التدرج فوقه */
     color: var(--text-color);
-    cursor: pointer;;
-    background-repeat: no-repeat;
-    background-size: cover;
+    cursor: pointer;
+    margin: 0; 
+    padding: 0;
+    min-height: 100vh; /* 3. يضمن أن اللون يغطي كامل طول الشاشة */
+    background-attachment: fixed; /* 4. يثبت الخلفية عند السحب في الجوال */
+    overflow-x: hidden; /* 5. يمنع "الهجولة" واللون الأبيض جهة اليمين */
 }
 /* Dark subtle grid background */
 body::before {
