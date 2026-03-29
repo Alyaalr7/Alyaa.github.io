@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 html, body {
-	overflow-x: hidden;
-
+    overflow-x: hidden;
+}
 * {
     box-sizing: border-box; /* موجود عندك */
 }
@@ -352,7 +352,7 @@ a,input{
     cursor: pointer;
 }
 #preloader{
-    background-color:black;
+    background-color:white;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -519,7 +519,6 @@ section{
 }
 
 .home{
-    overflow: hidden; /* يمنع أي عنصر متحرك من توسيع عرض الصفحة */
     display: flex;
     justify-content: center;
     align-items: center;
