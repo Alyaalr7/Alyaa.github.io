@@ -359,8 +359,8 @@ a,input{
     cursor: pointer;
 }
 #preloader{
-    background-color:white;
-    height: 100%;
+	background-color: #0b0f17; /* غيري الأبيض لأسود فوراً */
+	height: 100%;
     width: 100%;
     position: fixed;
     z-index: 99999;
