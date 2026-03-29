@@ -520,6 +520,7 @@ section{
 
 .home{
     display: flex;
+	overflow: hidden; /* هذا السطر هو الأهم لمنع الشاشة البيضاء الجانبية */
     justify-content: center;
     align-items: center;
     text-align: center;
